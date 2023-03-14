@@ -1,0 +1,544 @@
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  color: black;
+  width:  100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+video::-internal-media-controls-overlay-cast-button {
+  display: none;
+}
+
+div.white {
+  background-color: #fff;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+div.white figure {
+  margin: 0;
+}
+
+div.input-output {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+}
+div.input-output img {
+  width: 50%;
+  margin: 0;
+  padding: 1rem;
+  border:  none;
+}
+div.input-output span {
+  position: absolute;
+  color: black;
+  z-index: 1;
+  font-size: 200%;
+}
+div.input-output video {
+  width: 50%;
+  margin: 0;
+  border: none;
+  padding: 1rem;
+}
+
+
+div.authors p {
+  padding: 0 25px 25px 25px;
+  margin: 0;
+  font-size: 1.25em;
+}
+
+div.authors p.smaller {
+  padding: 0 25px;
+  margin: 0;
+  font-size: 1em;
+}
+
+
+div.topgallery {
+  width:  100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+figure.sampler > div {
+  /* height: 500px; */
+  overflow: hidden;
+  height: 42vw;
+}
+figure.sampler object {
+  /* margin: 0 80px 500px 80px; */
+  margin: 2rem;
+}
+
+div.white figure figcaption p {
+  margin: 0;
+}
+
+div.sota-comparisons {
+  width:  100%;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+div.sota-comparisons .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+div.sota-comparisons .col img {
+  width: 100%;
+}
+div.sota-comparisons .col video {
+  width: 100%;
+}
+
+div.authors {
+  /* background-color: rgb(26, 26, 26); */
+  background-color: #fff;
+  color: rgb(26, 26, 26);
+}
+
+div.authors p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+div.abstract {
+  background-color: #fff;
+  color: black;
+}
+
+div.abstract div.inside p.text {
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+}
+
+a.read-paper {
+  text-align: center;
+  display: block;
+}
+
+a.read-paper button:hover {
+  background-color: rgb(26, 26, 26);
+}
+
+@media only screen and (max-width: 999px) {
+  .nomobile {
+    display: none;
+  }
+
+  h1 {
+    font-family: 'Google Sans';
+    font-size: 1.5em;
+    padding: 0 25px;
+  }
+
+  h2 {
+    font-family: 'Google Sans';
+    font-size: 1em;
+    padding: 0 25px;
+  }
+
+  div.topgallery {
+    padding: 1rem;
+  }
+  div.topgallery .input-output {
+    width: 50%;
+  }
+  div.topgallery .input-output span {
+    padding-left: calc(25% - 1.5rem);
+    padding-top: calc(12.5% - 1.25rem);
+  }
+  div.topgallery video {
+    width: 50%;
+  }
+
+  h2.mobileonly {
+    font-family: 'Google Sans';
+    font-size: 1em;
+    padding: 0 25px;
+    margin: 0;
+  }
+
+  div.content1 {
+    background-color: rgb(35, 35, 35);
+    color: rgb(245, 245, 245);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.content1 div:first-child {
+    padding: 2rem;
+  }
+
+  div.content1.reversed {
+    flex-direction: column-reverse;
+  }
+
+  div.content1 div.right {
+    padding: 25px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 26, 26);
+  }
+
+  div.content1 h1 {
+    font-size: 1.5em;
+    padding: 25px;
+  }
+
+  div.content1 ul.highlights {
+    font-size: 1em;
+    margin: 0 0 0 50px;
+    padding: 0 25px 0 0;
+    list-style-type: decimal;
+  }
+
+  div.content1 ul.highlights li {
+    padding: 0 0 10px 0;
+  }
+
+  div.content1 table.pretty {
+    margin: 0 auto;
+  }
+
+  div.content1 table.pretty th {
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  div.content1 table.pretty th.fid {
+    text-align: center;
+  }
+
+  div.content1 table.pretty td {
+    font-size: 1em;
+  }
+
+  div.content1 table.pretty td.model {
+    padding: 0 10px;
+    color: rgb(123, 123, 123);
+  }
+
+  div.content1 table.pretty td.fid {
+    text-align: center;
+    color: rgb(123, 123, 123);
+  }
+
+  div.content1 table.pretty caption {
+    text-align: center;
+    font-size: 1em;
+    color: rgb(26, 26, 26);
+  }
+
+  div.authors {
+    padding: 2rem;
+  }
+
+  div.abstract {
+    font-size: 1em;
+    padding: 2rem;
+  }
+
+  div.abstract div.inside {
+    padding: 0;
+    text-align: justify;
+    margin: 0;
+  }
+
+  div.white figure img {
+    width: 100%;
+    padding: 25px 50px;
+  }
+
+  div.white figure figcaption {
+    bottom: 0px;
+    width: 100%;
+    padding: 2rem;
+    background-color: #fff;
+  }
+
+  div.header_dark_gray {
+    padding: 25px 10px;
+    background-color: #fff;
+    color: black;
+  }
+
+  div.header_dark_gray h1 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  div.header_dark_gray h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  a.read-paper button {
+    width: 140px;
+    padding: 10px;
+    background: rgb(26, 26, 26);
+    font: inherit;
+    background-color: gray;
+    border: 1px solid white;
+    color: white;
+    border-radius: 4px;
+  }
+
+  div.thanks {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+
+  div.sota-comparisons.nomobile {
+    display: none;
+  }
+  div.sota-comparisons.mobileonly {
+    display: flex;
+    padding: 0.5rem;
+  }
+  div.sota-comparisons .col {
+    width: 25%;
+    padding: 0;
+  }
+  div.sota-comparisons .col:first-child {
+    padding-top: calc(12.5vw - 1rem);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h1 {
+    font-family: 'Google Sans';
+    font-size: 4em;
+    padding: 0 25px;
+  }
+  h2 {
+    font-family: 'Google Sans';
+    font-size: 2em;
+    padding: 0 25px;
+  }
+
+  div.sota-comparisons.mobileonly {
+    display: none;
+  }
+  div.sota-comparisons.nomobile {
+    display: flex;
+    padding: 0 6rem;
+  }
+  div.sota-comparisons .row:first-child {
+    padding-top: 2rem;
+  }
+  div.sota-comparisons .col {
+    width: 16%;
+    font-size: 150%;
+  }
+
+  div.topgallery {
+    padding: 2rem 4rem;
+  }
+  div.topgallery div.input-output {
+    width: 25%;
+  }
+  div.topgallery div.input-output span {
+    padding-left: calc(12.5% - 1.5rem);
+    padding-top: calc(6.25% - 1.25rem);
+  }
+
+  div.content1 {
+    background-color: rgb(35, 35, 35);
+    color: rgb(245, 245, 245);
+    display: flex;
+  }
+
+  div.content1 > div {
+    padding: 50px;
+    width: 50%;
+  }
+
+  div.content1 p {
+    font-size: 1.5em;
+  }
+
+  div.content1 div.right {
+    padding: 50px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(26, 26, 26);
+  }
+
+  div.content1 h1 {
+    font-size: 2em;
+  }
+
+  div.content1 ul.highlights {
+    font-size: 1.5em;
+    margin: 0 0 0 75px;
+    padding: 0;
+    list-style-type: decimal;
+  }
+
+  div.content1 ul.highlights li {
+    padding: 0 0 25px 0;
+  }
+
+  div.content1 table.pretty {
+    margin: 0 auto;
+  }
+
+  div.content1 table.pretty th {
+    font-size: 1em;
+  }
+
+  div.content1 table.pretty th.fid {
+    text-align: center;
+  }
+
+  div.content1 table.pretty td {
+    font-size: 1.2em;
+  }
+
+  div.content1 table.pretty td.model {
+    padding: 0 50px;
+    color: rgb(123, 123, 123);
+  }
+
+  div.content1 table.pretty td.fid {
+    text-align: center;
+    color: rgb(123, 123, 123);
+  }
+
+  div.content1 table.pretty caption {
+    text-align: center;
+    color: rgb(26, 26, 26);
+    font-size: 1.5em;
+  }
+
+  div.thanks {
+    padding: 100px 100px 50px 100px;
+  }
+
+  div.thanks h1 {
+    font-size: 3em;
+  }
+
+  div.thanks p {
+    padding: 0 50px 50px 50px;
+    margin: 0;
+    font-size: 2em;
+  }
+
+  div.thanks p.smaller {
+    padding: 0 50px 50px 50px;
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  div.thanks a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+  }
+
+  div.thanks a:link {
+    text-decoration: none;
+  }
+
+  div.thanks a:visited {
+    text-decoration: none;
+  }
+
+  div.thanks a:active {
+    text-decoration: none;
+  }
+
+  div.thanks a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  div.authors {
+    /*padding: 50px 100px;*/
+    padding: 0px 0px;
+    font-size: 1.25em;
+  }
+
+  div.abstract {
+    padding: 50px 100px;
+    font-size: 1.4em;
+  }
+
+  div.abstract div.inside {
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  div.abstract div.inside p.text {
+    padding: 0;
+    margin: 0;
+  }
+
+  div.white figure img {
+    display: block;
+    margin: auto;
+    width: 700px;
+    padding: 50px;
+  }
+
+  div.white figure figcaption {
+    bottom: 0px;
+    width: 100%;
+    padding: 4rem;
+    background-color:#fff;
+  }
+
+  div.white figure figcaption p {
+    font-size: 1.2em;
+  }
+
+  div.header_dark_gray {
+    padding: 50px;
+    background-color: #fff;
+    color: black;
+  }
+
+  div.header_dark_gray h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  div.header_dark_gray h2 {
+    font-size: 2.0em;
+    text-align: center;
+  }
+
+  a.read-paper button {
+    width: 200px;
+    height: 50px;
+    background: None;
+    background-color: gray;
+    font: inherit;
+    border: 1px solid white;
+    color: white;
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>3DDesigner</title>
+  </head>
+  <body>
+    <div style="padding: 2rem 0; background-color: #fff;">
+<!--       <h1 style="text-align: center;">3DDesigner</h1> -->
+      <h1 style="text-align: center;"><img style="width: 15%" src='./static/logo.png'></h1>
+      <h2 style="text-align: center;">Towards Photorealistic 3D Object Generation and Editing with Text-guided Diffusion Models</h2>
+    </div>
+    
+<!--     <div class="container" style="max-width: 840px;">
+                <div class="row">
+                    <div class="col-md author"><a href="https://chenhsuanlin.bitbucket.io/" target="_blank">Chen-Hsuan Lin</a>*</div>
+                    <div class="col-md author"><a href="https://www.cs.toronto.edu/~jungao/" target="_blank">Jun Gao</a>*</div>
+                    <div class="col-md author"><a href="http://lumingtang.info" target="_blank">Luming Tang</a>*</div>
+                    <div class="col-md author"><a href="https://tovacinni.github.io" target="_blank">Towaki Takikawa</a>*</div>
+                    <div class="col-md author"><a href="https://www.cs.utoronto.ca/~xiaohui/" target="_blank">Xiaohui Zeng</a>*</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md author"><a href="https://xunhuang.me" target="_blank">Xun Huang</a></div>
+                    <div class="col-md author"><a href="https://karstenkreis.github.io/" target="_blank">Karsten Kreis</a></div>
+                    <div class="col-md author"><a href="https://www.cs.utoronto.ca/~fidler/" target="_blank">Sanja Fidler</a><sup>†</sup></div>
+                    <div class="col-md author"><a href="http://mingyuliu.net/" target="_blank">Ming-Yu Liu</a><sup>†</sup></div>
+                    <div class="col-md author"><a href="https://tsungyilin.info" target="_blank">Tsung-Yi Lin</a></div>
+                </div>
+
+                <div class="row" style="margin-top:0.5rem; margin-left: auto; margin-right: auto;">
+                    <div class="col-md">
+                        <h9>*<sup>†</sup> : equal contributions</h9>
+                        <div id="affiliation">NVIDIA Corporation</div>
+                    </div>
+                </div>
+    </div> -->
+
+    <div class="authors">
+      <p style="padding-bottom: 5px;"> Gang Li*, Heliang Zheng*, Chaoyue Wang, Chang Li, Changwen Zheng, Dacheng Tao.</p>
+      <p class="smaller">Institute of Software, Chinese Academy of Sciences; University of Chinese Academy of Sciences; JD Explore Academy</p>
+    </div> 
+    
+
+    <div style="text-align: center; padding: 0; background-color: #fff;">
+      <h5>Video</h5>
+      <video autoplay loop muted style="max-width: 100vw;"><source type="video/mp4" src="./static/3DDesigner_video.mp4"></video>
+    </div>
+
+    <!-- <div class="topgallery">
+      <div class="input-output">
+        <img src="./static/srn_shapenet/cars_6_cond.png">
+        <span>&#8594</span>
+        <video autoplay loop muted><source type="video/mp4" src="./static/srn_shapenet/cars_6_hyp.mp4"></video>
+      </div>
+      <div class="input-output">
+        <img src="./static/srn_shapenet/chairs_17_cond.png">
+        <span>&#8594</span>
+        <video autoplay loop muted><source type="video/mp4" src="./static/srn_shapenet/chairs_17_hyp.mp4"></video>
+      </div>
+      <div class="input-output">
+        <img src="./static/srn_shapenet/cars_42_cond.png">
+        <span>&#8594</span>
+        <video autoplay loop muted><source type="video/mp4" src="./static/srn_shapenet/cars_42_hyp.mp4"></video>
+      </div>
+      <div class="input-output">
+        <img src="./static/srn_shapenet/chairs_121_cond.png">
+        <span>&#8594</span>
+        <video autoplay loop muted><source type="video/mp4" src="./static/srn_shapenet/chairs_121_hyp.mp4"></video>
+      </div>
+    </div> -->
+
+    <div class="abstract">
+      <div class="inside">
+        <p class="text">
+Text-guided diffusion models have shown superior performance in image/video generation and editing. While few explorations have been 
+performed in 3D scenarios. In this paper, we discuss three fundamental and interesting problems on this topic. First, we 
+equip text-guided diffusion models to achieve 3D-consistent generation. Specifically, we integrate a NeRF-like neural
+field to generate low-resolution coarse results for a given camera view. Such results can provide 3D priors as condition information
+for the following diffusion process. During denoising diffusion, we further enhance the 3D consistency by modeling cross-view 
+correspondences with a novel two-stream (corresponding to two different views) asynchronous diffusion process. Second, we study
+3D local editing and propose a two-step solution that can generate 360 degrees manipulated results by editing an object from 
+a single view. Step 1, we propose to perform 2D local editing by blending the predicted noises. Step 2, we conduct a noise-to-text 
+inversion process that maps 2D blended noises into the view-independent text embedding space. Once the corresponding text embedding
+is obtained, 360 degrees images can be generated. Last but not least, we extend our model to perform one-shot novel view synthesis
+by fine-tuning on a single image, firstly showing the potential of leveraging text guidance for novel view synthesis. 
+Extensive experiments and various applications show the prowess of our 3DDesigner. 
+        </p>
+<!--         <br>
+        <p class="text">Authored by Gang Li, Heliang Zheng, Chaoyue wang, Chang Li,Changwen Zheng, and DaCheng Tao.</p>
+        <br> -->
+        <a class="read-paper" href="https://arxiv.org/pdf/2211.14108.pdf" target="_blank"><button>Research Paper</button></a>
+      </div>
+    </div>
+
+    <div class="white">
+      <figure class="sampler">
+        <div align="center"><object type="image/jpeg" data="./static/framework.jpg" width="90%" height="80%" ></object></div>
+        <figcaption><p><b>3DDesigner.</b> An illustration of our framework for text-guided 3D-consistent generation (training phase). (A) NeRF-based Condition Module,
+which takes <one coarse text, two camera views> pairs as inputs and generates low-resolution coarse results. The coarse results are resized
+and concatenated with noised images to provide conditions for denoising. (B) Two-stream Asynchronous Diffusion Module, which takes
+<one full text, two coarse results, two timesteps, two noised images> quadruples as inputs and predicts the added noises. Each stream
+is a vanilla text-guided diffusion model except for the feature interaction module after each attention block. Note that the timesteps are
+randomly generated and the parameters of these two streams are shared. </p></figcaption>
+      </figure>
+
+    </div>
+<!--     <div class="container">
+            <div id="citation">
+                waiting。。。。。
+            </div>
+     </div> -->
+
+
+    <!-- <div class="authors">
+      <p style="padding-bottom: 25px;">Daniel Watson, William Chan, Ricardo Martin-Brualla, Jonathan Ho, Andrea Tagliasacchi, Mohammad Norouzi</p>
+      <p class="smaller">Google Research</p>
+    </div> -->
+
+<!--     <div class="thanks">
+      <h1>Special Thanks</h1>
+      <br>
+      <p class="smaller" style="text-align: justify;">We would like to thank Ben Poole for thoroughly reviewing this work, and providing useful feedback and ideas since the earliest stages of our research. We thank Tim Salimans for providing us with stable code to train diffusion models, which we used as the starting point for this paper, as well as code for neural network modules and diffusion sampling tricks used in their more recent "Video Diffusion Models" paper. We thank Erica Moreira for her critical support on juggling resource allocations for us to execute our work. We also thank David Fleet for his key support on securing the computational resources required for our work, as well as the many helpful research discussions throughout. We additionally would like to acknowledge and thank Kai-En Lin and Vincent Sitzmann for providing us with the outputs of their work on novel view synthesis and their helpful correspondence. We thank Mehdi Sajjadi and Etienne Pot for consistently lending us their expertise, especially on issues with datasets, cameras, rays, and all-things 3D. We thank Keunhong Park, who refactored a lot of the NeRF code we used, which made it easier to implement our proposed 3D consistency evaluation scheme. We thank Sarah Laszlo for helping us ensure our models and datasets meet responsible AI practices. Finally, we'd like to thank Geoffrey Hinton, Chitwan Saharia, and more widely the Google Brain Toronto team for their useful feedback, suggestions, and ideas throughout our research effort.</p>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
