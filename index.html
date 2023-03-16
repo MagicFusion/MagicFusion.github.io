@@ -95,13 +95,8 @@ The advent of open-source AI communities has produced a cornucopia of powerful t
 
     <div class="white">
       <figure class="sampler">
-        <div align="center"><object type="image/jpeg" data="./static/framework.jpg" width="90%" height="80%" ></object></div>
-        <figcaption><p><b>3DDesigner.</b> An illustration of our framework for text-guided 3D-consistent generation (training phase). (A) NeRF-based Condition Module,
-which takes <one coarse text, two camera views> pairs as inputs and generates low-resolution coarse results. The coarse results are resized
-and concatenated with noised images to provide conditions for denoising. (B) Two-stream Asynchronous Diffusion Module, which takes
-<one full text, two coarse results, two timesteps, two noised images> quadruples as inputs and predicts the added noises. Each stream
-is a vanilla text-guided diffusion model except for the feature interaction module after each attention block. Note that the timesteps are
-randomly generated and the parameters of these two streams are shared. </p></figcaption>
+        <div align="center"><object type="image/jpeg" data="./static/method.pdf" width="90%" height="80%" ></object></div>
+        <figcaption><p>An overview of our Saiency-aware Noise Blending. Given two diffusion models, we first design a ``Noise to salience map'' module to  obtain salience maps. After that, we can generate saliency-aware masks based on the salience maps. Finally, we blend the diffusion models in the noise space according to the mask. (*) $\hat\theta_g$ and $\hat\theta_e$ are noises instead of noisy images, and we add the image here just for visualization. </p></figcaption>
       </figure>
 
     </div>
