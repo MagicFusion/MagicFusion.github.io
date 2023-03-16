@@ -12,13 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
-    <title>3DDesigner</title>
+    <title>MagicFusion</title>
   </head>
   <body>
     <div style="padding: 2rem 0; background-color: #fff;">
-<!--       <h1 style="text-align: center;">3DDesigner</h1> -->
+<!--       <h1 style="text-align: center;">MagicFusion</h1> -->
       <h1 style="text-align: center;"><img style="width: 15%" src='./static/logo.png'></h1>
-      <h2 style="text-align: center;">Towards Photorealistic 3D Object Generation and Editing with Text-guided Diffusion Models</h2>
+      <h2 style="text-align: center;">MagicFusion: Boosting Text-to-Image Generation Performance by Fusing Diffusion Models</h2>
     </div>
     
 <!--     <div class="container" style="max-width: 840px;">
@@ -47,8 +47,8 @@
     </div> -->
 
     <div class="authors">
-      <p style="padding-bottom: 5px;"> Gang Li*, Heliang Zheng*, Chaoyue Wang, Chang Li, Changwen Zheng, Dacheng Tao.</p>
-      <p class="smaller">Institute of Software, Chinese Academy of Sciences; University of Chinese Academy of Sciences; JD Explore Academy</p>
+      <p style="padding-bottom: 5px;">Anonymous author</p>
+      <!-- <p class="smaller">Institute of Software, Chinese Academy of Sciences; University of Chinese Academy of Sciences; JD Explore Academy</p>  -->
     </div> 
     
 
@@ -83,18 +83,7 @@
     <div class="abstract">
       <div class="inside">
         <p class="text">
-Text-guided diffusion models have shown superior performance in image/video generation and editing. While few explorations have been 
-performed in 3D scenarios. In this paper, we discuss three fundamental and interesting problems on this topic. First, we 
-equip text-guided diffusion models to achieve 3D-consistent generation. Specifically, we integrate a NeRF-like neural
-field to generate low-resolution coarse results for a given camera view. Such results can provide 3D priors as condition information
-for the following diffusion process. During denoising diffusion, we further enhance the 3D consistency by modeling cross-view 
-correspondences with a novel two-stream (corresponding to two different views) asynchronous diffusion process. Second, we study
-3D local editing and propose a two-step solution that can generate 360 degrees manipulated results by editing an object from 
-a single view. Step 1, we propose to perform 2D local editing by blending the predicted noises. Step 2, we conduct a noise-to-text 
-inversion process that maps 2D blended noises into the view-independent text embedding space. Once the corresponding text embedding
-is obtained, 360 degrees images can be generated. Last but not least, we extend our model to perform one-shot novel view synthesis
-by fine-tuning on a single image, firstly showing the potential of leveraging text guidance for novel view synthesis. 
-Extensive experiments and various applications show the prowess of our 3DDesigner. 
+The advent of open-source AI communities has produced a cornucopia of powerful text-guided diffusion models that are trained on various datasets. While few explorations have been conducted on ensembling such models to combine their strengths. In this work, we propose a simple yet effective method called Saliency-aware Noise Blending (SNB) that can empower the fused text-guided diffusion models to achieve more controllable generation. Specifically, we experimentally find that the responses of classifier-free guidance are highly related to the saliency of generated images. Thus we propose to trust different models in their areas of expertise by blending the predicted noises of two diffusion models in a saliency-aware manner. SNB is training-free and can be completed within a DDIM sampling process. Additionally, it can automatically align the semantics of two noise spaces without requiring additional annotations such as masks. Extensive experiments show  the impressive effectiveness of SNB in various applications.
         </p>
 <!--         <br>
         <p class="text">Authored by Gang Li, Heliang Zheng, Chaoyue wang, Chang Li,Changwen Zheng, and DaCheng Tao.</p>
