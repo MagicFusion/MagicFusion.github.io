@@ -107,6 +107,8 @@ controllability of the generated content by simply setting the fusion strategy i
 start or stop fusion). More principles and laws about the noise space of diffusion models are expected to be discovered
 by exploring our MagicFusion.
 
+Thanks.
+
 ### BibTeX
 
 ```
