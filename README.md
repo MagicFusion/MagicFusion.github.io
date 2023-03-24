@@ -14,7 +14,7 @@ First set-up the ldm enviroment following the instruction from textual inversion
 repo.
 
 To use our method, you need to obtain the pre-trained stable diffusion models following their instructions. You can
-decide which version of checkpoint to use, but I use sd-v1-4-full-ema.ckpt. You can grab the stable diffusion
+decide which version of checkpoint to use, but I use `sd-v1-4-full-ema.ckpt`. You can grab the stable diffusion
 model `sd-v1-4-full-ema.ckpt` from https://huggingface.co/CompVis/stable-diffusion-v-1-4-original and make sure to put
 it in the root path. Similarly, for the Gartoon model `anything-v3-full.safetensors`, just head over
 to https://huggingface.co/Linaqruf/anything-v3.0/tree/main and download the file 'anything-v3-full.safetensors' to the
