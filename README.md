@@ -122,7 +122,7 @@ by exploring our MagicFusion.
 
 Thanks.
 
-### BibTeX
+<!-- ### BibTeX
 
 ```
 @misc{zhao2023magicfusion,
@@ -132,5 +132,5 @@ Thanks.
       eprint={2303.13126},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
-```
+``` -->
 
