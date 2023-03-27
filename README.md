@@ -105,7 +105,7 @@ give a scene prompt to general model and a fine-grained prompt to car model.
 For Application 2, i.e., recontextualization, you need to fine-tune the stable diffusion model for a specific object
 like [Dreambooth](https://github.com/XavierXiao/Dreambooth-Stable-Diffusion) does. To generate the specific object with
 the placeholder `[]` (e.g. sks), both `model0` and `model1` are specified as the fine-tuned model. Then, the fusion
-result can be abtained by giving the prompt '`a photo of [] <class>`' and '`a photo of [] <class> <environment>`'.
+result can be abtained by giving the prompt '`a photo of [] <class>`' and '`a photo of [] <class> <scene>`'.
 
 For Application 1 and 2, we get the experimental result just by setting `merge_mode=1`.
 
