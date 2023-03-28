@@ -26,7 +26,7 @@ To get started, install the additionally required python packages into your ldm 
 ```
 pip install safetensors==0.3.0 omegaconf==2.1.1 tqdm==4.64.0 einops==0.6.0 pytorch_lightning==1.6.0 scikit-learn==0.24.2 matplotlib==3.4.2 
 ```
-or any other package you've been reminded to install.
+or other packages that are reminded to be installed.
 
 #### Models
 
