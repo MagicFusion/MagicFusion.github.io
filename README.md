@@ -1,4 +1,4 @@
-# MagicFusion: Boosting Text-to-Image Generation Performance by Fusing Diffusion Models
+# MagicFusion: Boosting Text-to-Image Generation Performance by Fusing Diffusion Models(ICCV 2023)
 
 ### Abstract
 
