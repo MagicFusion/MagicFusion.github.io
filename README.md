@@ -134,15 +134,16 @@ by exploring our MagicFusion.
 
 Thanks.
 
-<!-- ### BibTeX
+### BibTeX
 
 ```
-@misc{zhao2023magicfusion,
-      title={MagicFusion: Boosting Text-to-Image Generation Performance by Fusing Diffusion Models}, 
-      author={Jing Zhao and Heliang Zheng and Chaoyue Wang and Long Lan and Wenjing Yang},
-      year={2023},
-      eprint={2303.13126},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-``` -->
+@InProceedings{Zhao_2023_ICCV,
+    author    = {Zhao, Jing and Zheng, Heliang and Wang, Chaoyue and Lan, Long and Yang, Wenjing},
+    title     = {MagicFusion: Boosting Text-to-Image Generation Performance by Fusing Diffusion Models},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {22592-22602}
+}
+``` 
 
